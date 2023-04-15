@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Exploding - Cadastrar Funcionários</title>
+		<title>Exploding Prices - Cadastrar Funcionários</title>
 	</head>
 	<body>
 <?php
@@ -22,6 +22,12 @@
 			
 			<label for="endereco">Endereço</label><br>
 			<input type="text" name="endereco" id="endereco" maxlength="100"><br><br>
+
+			<label for="status">Status</label><br>
+			<select name="status" id="status">
+				<option value="A">Ativo</option>
+				<option value="I">Inativo</option>
+			</select><br><br>
 			
 			<button type="submit">Cadastrar</button>
 		</form>

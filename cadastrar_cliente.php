@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Exploding - Cadastrar Clientes</title>
+		<title>Exploding Prices - Cadastrar Clientes</title>
 	</head>
 	<body>
 
-		<form action="cadastrar_clientes_db.php" method="post">
+<?php
+	include('menu.php');
+?>
+
+		<form action="cadastrar_cliente_db.php" method="post">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="50"><br><br>
 			
@@ -17,6 +21,12 @@
 			
 			<label for="cpf">CPF</label><br>
 			<input type="text" name="cpf" id="cpf" maxlength="11"><br><br>
+
+			<label for="status">Status</label><br>
+			<select name="status" id="status">
+				<option value="A">Ativo</option>
+				<option value="I">Inativo</option>
+			</select><br><br>
 						
 			<button type="submit">Cadastrar</button>
 		</form>
