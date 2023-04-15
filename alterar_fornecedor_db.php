@@ -12,12 +12,12 @@ include('conexao.php');
     <?php
     include('menu.php');
 
-    $id     = $_POST['id'];
-    $razao_social     = $_POST['razao_social'];
-    $endereco    = $_POST['descricao'];
-    $telefone = $_POST['telefone'];
-    $cpnj = $_POST['cpnj'];
-    $status      = $_POST['status'];
+    $id           = $_POST['id'];
+    $razao_social = $_POST['razao_social'];
+    $endereco     = $_POST['descricao'];
+    $telefone     = $_POST['telefone'];
+    $cpnj         = $_POST['cpnj'];
+    $status       = $_POST['status'];
 
     $sql = "UPDATE fornecedor SET razao_social = '{$razao_social}', endereco = '{$endereco}', telefone = '{$telefone}', cpnj = '{$cpnj}', status = '{$status}' WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
