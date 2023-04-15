@@ -49,6 +49,12 @@ include('conexao.php');
             ?>
         </select><br><br>
 
+        <label for="status">Status</label><br>
+        <select name="status" id="status">
+            <option value="A" <?php if ($arr['status'] == 'A') { ?>selected="selected" <?php } ?>>Ativo</option>
+            <option value="I" <?php if ($arr['status'] == 'I') { ?>selected="selected" <?php } ?>>Inativo</option>
+        </select><br><br>
+
 
         <button type="submit">Salvar</button>
     </form>

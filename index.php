@@ -21,8 +21,8 @@
     }
     ?>
     <form action="login_db.php" method="post">
-        <label for="usuario">Usuário</label><br>
-        <input type="usuario" name="usuario" id="usuario" maxlength="40"><br><br>
+        <label for="login">Usuário</label><br>
+        <input type="text" name="login" id="login" maxlength="40"><br><br>
 
         <label for="senha">Senha</label><br>
         <input type="password" name="senha" id="senha" maxlength="20"><br><br>

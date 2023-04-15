@@ -1,10 +1,11 @@
 <?php
 include('conexao.php');
 
-$login = $_POST['usuario'];
-$senha = $_POST['senha'];
+$login = $_POST['login'];
+$senha = ($_POST['senha']);
 
-$sql = "SELECT id, nome FROM usuario WHERE login = '{$login}' AND senha = '{$senha}'";
+$sql = "SELECT id FROM usuario WHERE login = '{$login}' AND senha = '{$senha}'";
+print_r($sql);
 $query = mysqli_query($con, $sql);
 if (!$query) {
     header('Location: index.php?erro=1&msg=' . mysqli_error($con));

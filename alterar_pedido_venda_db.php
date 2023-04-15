@@ -14,29 +14,30 @@ include('conexao.php');
 
     $id            = $_POST['id'];
     $id_cliente    = $_POST['id_cliente'];
-    $data_coleta   = $_POST['data_coleta'];
-    $data_prevista = $_POST['data_prevista'];
-    $data_entrega  = $_POST['data_entrega'];
+    $id_funcionario   = $_POST['id_funcionario'];
+    $data_pedido = $_POST['data_pedido'];
+    $status = $_POST['status'];
+    $valor_pedido = $_POST['valor_pedido'];
 
-    $sql = "UPDATE locacao SET id_cliente = '{$id_cliente}', data_coleta = '{$data_coleta}', data_prevista = '{$data_prevista}', data_entrega = '{$data_entrega}' WHERE id = '{$id}'";
+    $sql = "UPDATE pedido_venda SET id_cliente = '{$id_cliente}', id_funcionario = '{$id_funcionario}', data_pedido = '{$data_pedido}', status = '{$status}', valor_pedido ='{$valor_pedido} WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);
     } else {
-        $id_locacao = mysqli_insert_id($con);
+        $id_pedido_venda = mysqli_insert_id($con);
 
-        $sql = "DELETE FROM locacao_item WHERE id_locacao = '{$id}'";
+        $sql = "DELETE FROM item_pedido WHERE id_pedido_venda = '{$id}'";
         $query = mysqli_query($con, $sql);
 
-        foreach ($_POST['id_midia'] as $id_midia) {
-            $sql = "INSERT INTO locacao_item VALUES ('{$id}', '{$id_midia}')";
+        foreach ($_POST['id_produto'] as $id_produto) {
+            $sql = "INSERT INTO item_pedido VALUES ('{$id}', '{$id_produto}', '1','0')";
             $query = mysqli_query($con, $sql);
         }
 
         if (!$query) {
             echo 'Erro no banco: ' . mysqli_error($con);
         } else {
-            echo 'Locação alterada com sucesso! Locação código: ' . $id;
+            echo 'Pedido alterado com sucesso! Pedido código: ' . $id;
         }
     }
     ?>

@@ -19,7 +19,7 @@ include('conexao.php');
     $id_categoria = $_POST['id_categoria'];
     $status     = $_POST['status'];
 
-    $sql = "INSERT INTO produto VALUES (null, '{$nome}','{$descricao}', '{$preco}', '{$estoque}' ,{$id_categoria}'{$status}')";
+    $sql = "INSERT INTO produto VALUES (null, '{$nome}','{$descricao}', '{$preco}', '{$estoque}' ,{$id_categoria}', {$status}')";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);

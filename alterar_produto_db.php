@@ -17,9 +17,10 @@ include('conexao.php');
     $descricao    = $_POST['descricao'];
     $preco = $_POST['preco'];
     $estoque = $_POST['estoque'];
-    $id_categoria      = $_POST['idCategoria'];
+    $id_categoria      = $_POST['id_categoria'];
+    $status      = $_POST['status'];
 
-    $sql = "UPDATE produto SET nome = '{$nome}', email = '{$email}', descricao = '{$descricao}', preco = '{$preco}', estoque = '{$estoque}', id_categoria= '{$id_categoria}' WHERE id = '{$id}'";
+    $sql = "UPDATE produto SET nome = '{$nome}', descricao = '{$descricao}', preco = '{$preco}', estoque = '{$estoque}', id_categoria= '{$id_categoria}' , status = '{$status}'WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);
