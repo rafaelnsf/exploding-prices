@@ -17,22 +17,22 @@ include('conexao.php');
 
 <body>
     <div class="conteudo">
-    <?php
-    include('menu.php');
+        <?php
+        include('menu.php');
 
-    $id     = $_POST['id'];
-    $nome     = $_POST['nome'];
-    $descricao    = $_POST['descricao'];
-    $status      = $_POST['status'];
+        $id     = $_POST['id'];
+        $nome     = $_POST['nome'];
+        $descricao    = $_POST['descricao'];
+        $status      = $_POST['status'];
 
-    $sql = "UPDATE produto SET nome = '{$nome}', descricao = '{$descricao}', status = '{$status}'WHERE id = '{$id}'";
-    $query = mysqli_query($con, $sql);
-    if (!$query) {
-        echo 'Erro no banco: ' . mysqli_error($con);
-    } else {
-        echo 'Categoria alterado com sucesso! Categoria alterado código: ' . $id;
-    }
-    ?>
+        $sql = "UPDATE categoria SET nome = '{$nome}', descricao = '{$descricao}', status = '{$status}'WHERE id = '{$id}'";
+        $query = mysqli_query($con, $sql);
+        if (!$query) {
+            echo 'Erro no banco: ' . mysqli_error($con);
+        } else {
+            echo 'Categoria alterado com sucesso! Categoria alterado código: ' . $id;
+        }
+        ?>
     </div>
 </body>
 
