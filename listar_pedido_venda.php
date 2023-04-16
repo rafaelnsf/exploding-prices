@@ -6,21 +6,7 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Listar Pedidos de Vendas</title>
-    <style type="text/css" rel="stylesheet">
-        table {
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        .conteudo {
-            margin-left: 220px;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style_tables.css">
 </head>
 
 <body>
@@ -28,7 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
-        <a href="cadastrar_pedido_venda.php">Cadastrar</a>
+        <a class="btn" href="cadastrar_pedido_venda.php">Cadastrar</a>
         <?php
         $sql = "SELECT pv.id, pv.data_pedido_venda, pv.valor_pedido, pv.id_cliente, pv.status, c.nome AS nome_cliente
 			FROM pedido_venda AS pv

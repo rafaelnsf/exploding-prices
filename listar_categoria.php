@@ -6,21 +6,7 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Listar Categorias</title>
-    <style type="text/css" rel="stylesheet">
-        table {
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        .conteudo {
-            margin-left: 220px;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style_tables.css">
 </head>
 
 <body>
@@ -28,7 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
-        <a href="cadastrar_categoria.php">Cadastrar</a>
+        <a class="btn" href="cadastrar_categoria.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM categoria";
         $query = mysqli_query($con, $sql);
