@@ -46,7 +46,7 @@ include('conexao.php');
             </thead>
             <tbody>
                 <?php
-                $quantidade = $_POST['quantidade'];
+                $quantidade = @$_POST['quantidade'];
                 if ($quantidade > 0) {
                     for ($i = 0; $i < $quantidade; $i++) {
                 ?>
