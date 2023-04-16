@@ -57,7 +57,7 @@ include('conexao.php');
                         <td>
                             <a href="alterar_pedido_compra.php?id=<?php echo $arr['id']; ?>">Alterar</a>
 
-                            <a href="excluir_item_compra_db.php?id=<?php echo $arr['id']; ?>">Excluir</a>
+                            <a href="excluir_pedido_compra_db.php?id=<?php echo $arr['id']; ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php
