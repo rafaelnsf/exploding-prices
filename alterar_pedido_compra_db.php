@@ -5,7 +5,7 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Alterar Pedido de Venda</title>
+    <title>Exploding Prices - Alterar Pedido de Compra</title>
 </head>
 
 <body>
@@ -13,24 +13,23 @@ include('conexao.php');
     include('menu.php');
 
     $id            = $_POST['id'];
-    $id_cliente    = $_POST['id_cliente'];
-    $id_funcionario   = $_POST['id_funcionario'];
-    $data_pedido_venda = $_POST['data_pedido_venda'];
+    $id_fornecedor   = $_POST['id_fornecedor'];
+    $data_pedido_compra = $_POST['data_pedido_compra'];
     $status = $_POST['status'];
-    $valor_pedido = $_POST['valor_pedido'];
+    $valor_compra = $_POST['valor_compra'];
 
-    $sql = "UPDATE pedido_venda SET id_cliente = '{$id_cliente}', id_funcionario = '{$id_funcionario}', data_pedido_venda = '{$data_pedido_venda}', status = '{$status}', valor_pedido ='{$valor_pedido}' WHERE id = '{$id}';";
+    $sql = "UPDATE pedido_compra SET id_fornecedor = '{$id_fornecedor}', data_pedido_compra = '{$data_pedido_compra}', status = '{$status}', valor_compra ='{$valor_compra}' WHERE id = '{$id}';";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);
     } else {
-        $id_pedido_venda = mysqli_insert_id($con);
+        $id_pedido_compra = mysqli_insert_id($con);
 
-        $sql = "DELETE FROM item_pedido WHERE id_pedido_venda = '{$id}'";
+        $sql = "DELETE FROM item_compra WHERE id_pedido_compra = '{$id}'";
         $query = mysqli_query($con, $sql);
 
         foreach ($_POST['id_produto'] as $id_produto) {
-            $sql = "INSERT INTO item_pedido VALUES ('{$id}', '{$id_produto}', '1','0')";
+            $sql = "INSERT INTO item_compra VALUES ('{$id}', '{$id_produto}', '1','0')";
             $query = mysqli_query($con, $sql);
         }
 

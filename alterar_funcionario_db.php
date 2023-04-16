@@ -20,7 +20,7 @@ include('conexao.php');
     $endereco   = $_POST['endereco'];
     $status     = $_POST['status'];
 
-    $sql = "UPDATE produto SET nome = '{$nome}', nome = '{$nome}', cargo = '{$cargo}', salario = '{$salario}', telefone= '{$telefone}' , endereco = '{$endereco}', status = '{$status}'WHERE id = '{$id}'";
+    $sql = "UPDATE funcionario SET nome = '{$nome}', nome = '{$nome}', cargo = '{$cargo}', salario = '{$salario}', telefone= '{$telefone}' , endereco = '{$endereco}', status = '{$status}'WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);

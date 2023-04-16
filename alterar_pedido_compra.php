@@ -5,62 +5,47 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Alterar Pedido de Venda</title>
+    <title>Exploding Prices - Alterar Pedido de Compra</title>
 </head>
 
 <body>
     <?php
     include('menu.php');
     $id = $_GET['id'];
-    $sql = "SELECT * FROM pedido_venda WHERE id = '{$id}'";
+    $sql = "SELECT * FROM pedido_compra WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
     $arr = mysqli_fetch_array($query, MYSQLI_ASSOC);
     ?>
-    <form action="alterar_pedido_venda.php?id=<?php echo $id; ?>" method="post">
+    <form action="alterar_pedido_compra.php?id=<?php echo $id; ?>" method="post">
         <label for="quantidade">Quantidade</label><br>
         <input type="number" name="quantidade" id="quantidade"><br><br>
 
         <button type="submit">Cadastrar</button>
     </form>
     <br><br>
-    <form action="alterar_pedido_venda_db.php" method="post">
+    <form action="alterar_pedido_compra_db.php" method="post">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 
         <label>Código</label><br>
         <?php echo $id; ?><br><br>
 
-        <label for="id_cliente">Cliente</label><br>
-        <select name="id_cliente" id="id_cliente">
+        <label for="id_fornecedor">Fornecedor</label><br>
+        <select name="id_fornecedor" id="id_fornecedor">
             <?php
-            $sql = "SELECT id, nome FROM cliente WHERE status = 'A'";
+            $sql = "SELECT id, razao_social FROM fornecedor WHERE status = 'A'";
             $query = mysqli_query($con, $sql);
             if ($query) {
                 while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
             ?>
-                    <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_cliente'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['nome']; ?></option>
+                    <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_fornecedor'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['razao_social']; ?></option>
             <?php
                 }
             }
             ?>
         </select><br><br>
 
-        <label for="id_funcionario">Funcionário</label><br>
-        <select name="id_funcionario" id="id_funcionario">
-            <?php
-            $sql = "SELECT id, nome FROM funcionario WHERE status = 'A'";
-            $query = mysqli_query($con, $sql);
-            if ($query) {
-                while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
-            ?>
-                    <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_funcionario'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['nome']; ?></option>
-            <?php
-                }
-            }
-            ?>
-        </select><br><br>
-
-        <label for="data_pedido_venda">Data Pedido</label><br>
-        <input type="datetime-local" name="data_pedido_venda" id="data_pedido_venda" value="<?php echo $arr['data_pedido_venda']; ?>"><br><br>
+        <label for="data_pedido_compra">Data Pedido</label><br>
+        <input type="datetime-local" name="data_pedido_compra" id="data_pedido_compra" value="<?php echo $arr['data_pedido_compra']; ?>"><br><br>
 
         <table>
             <thead>
@@ -70,7 +55,7 @@ include('conexao.php');
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM item_pedido WHERE id_pedido_venda = '{$id}'";
+                $sql = "SELECT * FROM item_compra WHERE id_pedido_compra = '{$id}'";
                 $query = mysqli_query($con, $sql);
                 while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
 
@@ -90,7 +75,7 @@ include('conexao.php');
                                 }
                                 ?>
                             </select>
-                            <a href="excluir_item_pedido_db.php?id_produto=<?php echo $arr2['id_produto']; ?>&id_pedido_venda=<?php echo $id; ?>">Excluir</a>
+                            <a href="excluir_item_compra_db.php?id_produto=<?php echo $arr2['id_produto']; ?>&id_pedido_compra=<?php echo $id; ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php
@@ -131,8 +116,8 @@ include('conexao.php');
             <option value="I" <?php if ($arr['status'] == 'I') { ?>selected="selected" <?php } ?>>Inativo</option>
         </select><br><br>
 
-        <label for="valor_pedido">Valor do Pedido</label><br>
-        <input type="text" name="valor_pedido" id="valor_pedido" value="<?php echo $arr['valor_pedido']; ?>"><br><br>
+        <label for="valor_compra">Valor do Pedido</label><br>
+        <input type="text" name="valor_compra" id="valor_compra" value="<?php echo $arr['valor_compra']; ?>"><br><br>
 
         <button type="submit">Alterar</button>
     </form>

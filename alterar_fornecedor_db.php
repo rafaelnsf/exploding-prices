@@ -14,12 +14,12 @@ include('conexao.php');
 
     $id           = $_POST['id'];
     $razao_social = $_POST['razao_social'];
-    $endereco     = $_POST['descricao'];
+    $endereco     = $_POST['endereco'];
     $telefone     = $_POST['telefone'];
-    $cpnj         = $_POST['cpnj'];
+    $cnpj         = $_POST['cnpj'];
     $status       = $_POST['status'];
 
-    $sql = "UPDATE fornecedor SET razao_social = '{$razao_social}', endereco = '{$endereco}', telefone = '{$telefone}', cpnj = '{$cpnj}', status = '{$status}' WHERE id = '{$id}'";
+    $sql = "UPDATE fornecedor SET razao_social = '{$razao_social}', endereco = '{$endereco}', telefone = '{$telefone}', cnpj = '{$cnpj}', status = '{$status}' WHERE id = '{$id}'";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);
