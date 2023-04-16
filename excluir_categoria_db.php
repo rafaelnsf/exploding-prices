@@ -6,9 +6,16 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Excluir Categoria</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
 
@@ -22,6 +29,7 @@ include('conexao.php');
         echo 'Categoria excluido com sucesso! Categoria Codigo: '. $id;
     }
     ?>
+    </div>
 </body>
 
 </html>

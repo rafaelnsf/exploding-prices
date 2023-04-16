@@ -1,5 +1,24 @@
 <?php
-	include('conexao.php');
+include('conexao.php');
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Exploding Prices - Cadastrar Fornecedor</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="conteudo">
+	<?php
+	include('menu.php');
+
 		
 			$razao_social = $_POST['razao_social'];
 			$endereco     = $_POST['endereco'];
@@ -14,6 +33,10 @@
 			} else {
 				echo 'Realizado cadastro do Fornecedor.' . mysqli_insert_id($con);
 			}
-
+			?>
+		</div>
+	</body>
+</html>
+<?php
 	mysqli_close($con);
 ?>

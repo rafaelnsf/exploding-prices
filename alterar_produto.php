@@ -6,9 +6,19 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Alterar Produto</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
     $id = $_GET['id'];
@@ -58,6 +68,7 @@ include('conexao.php');
 
         <button type="submit">Salvar</button>
     </form>
+    </div>
 </body>
 
 </html>

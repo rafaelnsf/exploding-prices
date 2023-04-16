@@ -6,9 +6,16 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Excluir Itens do pedido</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
 
@@ -24,6 +31,7 @@ include('conexao.php');
     }
     ?>
     <br><a href="alterar_pedido_compra.php?id=<?php echo $id_pedido_compra; ?>">Voltar para Pedido de Compra</a>
+    </div>
 </body>
 
 </html>

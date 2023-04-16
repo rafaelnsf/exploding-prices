@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Exploding Prices - Cadastrar Clientes</title>
-	</head>
-	<body>
+		<title>Exploding Prices - Cadastrar Cliente</title>
+		<style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    	</style>
 
-<?php
+	</head>
+
+	<body>
+	<div class="conteudo";
+	<?php
 	include('menu.php');
-?>
 
 		<form action="cadastrar_cliente_db.php" method="post">
 			<label for="nome">Nome</label><br>
@@ -30,6 +37,7 @@
 						
 			<button type="submit">Cadastrar</button>
 		</form>
+		</div>
 	</body>
 </html>
 

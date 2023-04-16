@@ -1,5 +1,22 @@
 <?php
 	include('conexao.php');
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exploding Prices - Cadastrar Funcionario</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="conteudo">
+		<?php
+		include('menu.php');
 		
 			$nome     = $_POST['nome'];
 			$cargo    = $_POST['cargo'];
@@ -15,6 +32,10 @@
 			} else {
 				echo 'Realizado cadastro do funcionário' . mysqli_insert_id($con);
 			}
-
+			?>
+		</div>
+	</body>
+	</html>
+<?php
 	mysqli_close($con);
 ?>

@@ -5,11 +5,17 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Alterar Funcionario
-    </title>
+    <title>Exploding Prices - Alterar Funcionario</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
     $id = $_GET['id'];
@@ -50,6 +56,7 @@ include('conexao.php');
 
         <button type="submit">Salvar</button>
     </form>
+</div>
 </body>
 
 </html>

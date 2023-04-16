@@ -5,10 +5,17 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Cadastrar Produtos</title>
+    <title>Exploding Prices - Cadastrar Produto</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
 
@@ -27,8 +34,8 @@ include('conexao.php');
         echo 'Produto cadastrado com sucesso! Novo produto código: ' . mysqli_insert_id($con);
     }
     ?>
+    </div>
 </body>
-
 </html>
 <?php
 mysqli_close($con);

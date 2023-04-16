@@ -6,9 +6,16 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Alterar Produto</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
 
@@ -28,6 +35,7 @@ include('conexao.php');
         echo 'Produto alterado com sucesso! Produto alterado código: ' . $id;
     }
     ?>
+    </div>
 </body>
 
 </html>

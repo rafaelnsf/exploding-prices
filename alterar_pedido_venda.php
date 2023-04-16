@@ -6,9 +6,16 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Alterar Pedido de Venda</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
     $id = $_GET['id'];
@@ -136,6 +143,7 @@ include('conexao.php');
 
         <button type="submit">Alterar</button>
     </form>
+    </div>
 </body>
 
 </html>

@@ -6,9 +6,16 @@ include('conexao.php');
 
 <head>
     <title>Exploding Prices - Alterar Pedido de Compra</title>
+    <style type="text/css" rel="stylesheet">
+        .conteudo {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="conteudo">
     <?php
     include('menu.php');
 
@@ -40,6 +47,7 @@ include('conexao.php');
         }
     }
     ?>
+    </div>
 </body>
 
 </html>
