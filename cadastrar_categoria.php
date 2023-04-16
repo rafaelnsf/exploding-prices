@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Exploding - Cadastrar Categoria</title>
+		<title>Exploding Prices - Cadastrar Categoria</title>
 	</head>
-	<body>
+	<body><?php
+    include('menu.php');
+    ?>
 
 		<form action="cadastrar_categoria_db.php" method="post">
 			<label for="nome">Nome</label><br>

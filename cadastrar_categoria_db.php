@@ -1,5 +1,16 @@
 <?php
 	include('conexao.php');
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Exploding Prices - Alterar Fornecedor</title>
+</head>
+
+<body>
+    <?php
+    include('menu.php');
 
 		
 			$nome   	  = $_POST['nome'];
