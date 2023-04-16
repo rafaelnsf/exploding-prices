@@ -10,11 +10,45 @@ include('conexao.php')
     <style type="text/css" rel="stylesheet">
         table {
             border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
         }
 
         th,
         td {
-            border: 1px solid black;
+            padding: 12px 15px;
+            text-transform: uppercase;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 25px;
+            text-decoration: none;
+            float: right;
+        }
+
+        .btn:hover {
+            background-color: #f8d100;
+            color: #000;
         }
 
         .conteudo {
@@ -29,7 +63,8 @@ include('conexao.php')
         <?php
         include('menu.php');
         ?>
-        <a href="cadastrar_produto.php">Cadastrar</a>
+        <h1>Produtos</h1>
+        <a class="btn" href="cadastrar_produto.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM produto";
         $query = mysqli_query($con, $sql);

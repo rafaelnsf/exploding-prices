@@ -1,11 +1,19 @@
 <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    * {
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
     .menu-vertical {
         width: 200px;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #f8f8f8;
+        margin: 0;
+        background-color: rgb(37, 37, 39);
         padding: 20px;
     }
 
@@ -23,13 +31,13 @@
     .menu-vertical li a {
         display: block;
         padding: 10px;
-        background-color: #ddd;
-        color: #333;
+        color: #FFF;
         text-decoration: none;
     }
 
     .menu-vertical li a:hover {
-        background-color: #ccc;
+        background-color: #f8d100;
+        color: #000;
     }
 </style>
 <div>
