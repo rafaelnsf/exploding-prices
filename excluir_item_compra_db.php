@@ -15,7 +15,7 @@ include('conexao.php');
     $id_produto   = $_GET['id_produto'];
     $id_pedido_compra = $_GET['id_pedido_compra'];
 
-    $sql = "DELETE FROM item_compra WHERE id_produto = '{$id_produto}' AND id_pedido_compra = '{$id_pedido_venda}'";
+    $sql = "DELETE FROM item_compra WHERE id_produto = '{$id_produto}' AND id_pedido_compra = '{$id_pedido_compra}'";
     $query = mysqli_query($con, $sql);
     if (!$query) {
         echo 'Erro no banco: ' . mysqli_error($con);
