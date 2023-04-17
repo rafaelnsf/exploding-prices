@@ -5,7 +5,7 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Listar Funcionarios</title>
+    <title>Exploding Prices - Listar Funcionários</title>
     <link rel="stylesheet" href="style_tables.css">
 </head>
 
@@ -14,6 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
+        <h1>Funcionários</h1>
         <a class="btn" href="cadastrar_funcionario.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM funcionario";

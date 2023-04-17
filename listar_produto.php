@@ -32,6 +32,7 @@ include('conexao.php')
                         <th>Descrição</th>
                         <th>Preço</th>
                         <th>Estoque</th>
+                        <th>Status</th>
                         <th>Categoria</th>
                         <th></th>
                         <th></th>
@@ -47,6 +48,7 @@ include('conexao.php')
                             <td><?php echo $arr['descricao']; ?></td>
                             <td><?php echo $arr['preco']; ?></td>
                             <td><?php echo $arr['estoque']; ?></td>
+                            <td><?php echo $arr['status']; ?></td>
                             <td><?php echo $arr['id_categoria']; ?></td>
                             <td>
                                 <a href="alterar_produto.php?id=<?php echo $arr['id']; ?>">Alterar</a>

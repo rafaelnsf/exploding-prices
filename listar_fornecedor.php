@@ -14,6 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
+        <h1>Fornecedores</h1>
         <a class="btn" href="cadastrar_fornecedor.php">Cadastrar</a>
         <?php
         $sql = "SELECT id, razao_social, cnpj, endereco, telefone, status FROM fornecedor";

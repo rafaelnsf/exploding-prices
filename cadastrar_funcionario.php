@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Exploding Prices - Cadastrar Funcionários</title>
+		<title>Exploding Prices - Cadastrar Funcionário</title>
 		<style type="text/css" rel="stylesheet">
         .conteudo {
             margin-left: 220px;
@@ -15,6 +15,7 @@
 <?php
 	include('menu.php');
 ?>
+		<h1>Cadastro de Funcionário</h1>
 		<form action="cadastrar_funcionario_db.php" method="post">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="50"><br><br>

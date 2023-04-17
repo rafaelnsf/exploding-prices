@@ -23,6 +23,7 @@ include('conexao.php');
     $query = mysqli_query($con, $sql);
     $arr = mysqli_fetch_array($query, MYSQLI_ASSOC);
     ?>
+    <h1>Alteração de Categoria</h1>
     <form action="alterar_categoria_db.php" method="post">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
 

@@ -23,6 +23,7 @@ include('conexao.php');
     $query = mysqli_query($con, $sql);
     $arr = mysqli_fetch_array($query, MYSQLI_ASSOC);
     ?>
+    <h1>Alteração de Pedido de Compra</h1>
     <form action="alterar_pedido_compra.php?id=<?php echo $id; ?>" method="post">
         <label for="quantidade">Quantidade</label><br>
         <input type="number" name="quantidade" id="quantidade"><br><br>

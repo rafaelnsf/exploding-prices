@@ -14,7 +14,7 @@
 	<?php
     include('menu.php');
     ?>
-
+    	<h1>Cadastro de Categoria</h1>
 		<form action="cadastrar_categoria_db.php" method="post">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="100"><br><br>

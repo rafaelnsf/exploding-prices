@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<title>Exploding Prices - Cadastrar Fornecedor</title>
@@ -14,6 +14,7 @@
 <?php
 	include('menu.php');
 ?>
+	<h1>Cadastro de Fornecedor</h1>
     <form action="cadastrar_fornecedor_db.php" method="post">
 			<label for="razao_social">Razão Social</label><br>
 			<input type="text" name="razao_social" id="razao_social" maxlength="50"><br><br>

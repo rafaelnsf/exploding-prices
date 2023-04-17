@@ -14,6 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
+        <h1>Categorias</h1>
         <a class="btn" href="cadastrar_categoria.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM categoria";

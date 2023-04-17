@@ -14,6 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
+        <h1>Pedidos de Venda</h1>
         <a class="btn" href="cadastrar_pedido_venda.php">Cadastrar</a>
         <?php
         $sql = "SELECT pv.id, pv.data_pedido_venda, pv.valor_pedido, pv.id_cliente, pv.status, c.nome AS nome_cliente

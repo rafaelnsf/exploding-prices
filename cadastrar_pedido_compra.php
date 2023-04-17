@@ -14,12 +14,12 @@ include('conexao.php');
     </style>
 
 </head>
-
 <body>
     <div class="conteudo">
     <?php
     include('menu.php');
     ?>
+    <h1>Cadastro de Pedido de Compra</h1>
     <form action="cadastrar_pedido_compra.php" method="post">
         <label for="quantidade">Quantidade de produtos</label><br>
         <input type="number" name="quantidade" id="quantidade"><br><br>

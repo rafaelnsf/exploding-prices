@@ -5,7 +5,7 @@ include('conexao.php');
 <html lang="pt-br">
 
 <head>
-    <title>Exploding Prices - Listar Pedidos de Compras</title>
+    <title>Exploding Prices - Listar Pedidos de Compra</title>
     <link rel="stylesheet" href="style_tables.css">
 </head>
 
@@ -14,6 +14,7 @@ include('conexao.php');
         <?php
         include('menu.php');
         ?>
+        <h1>Pedidos de Compra</h1>
         <a class="btn" href="cadastrar_pedido_compra.php">Cadastrar</a>
         <?php
         $sql = "SELECT pc.id, pc.data_pedido_compra, pc.valor_compra, pc.id_fornecedor, pc.status, f.razao_social AS nome_fornecedor
