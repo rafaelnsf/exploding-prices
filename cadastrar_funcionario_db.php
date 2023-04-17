@@ -30,7 +30,7 @@
 			if(!$query) {
 				echo 'Erro ao consultar o banco.' . mysqli_error($con);
 			} else {
-				echo 'Realizado cadastro do funcionário' . mysqli_insert_id($con);
+				echo 'Realizado cadastro do funcionário: ' . mysqli_insert_id($con);
 			}
 			?>
 		</div>

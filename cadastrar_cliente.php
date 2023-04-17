@@ -10,12 +10,12 @@
     	</style>
 	</head>
 	<body>
-	<div class="conteudo";
-	<?php
+		<div class="conteudo";>
+<?php
 	include('menu.php');
-	?>
-		<h1>Cadastro de Cliente</h1>
-		<form action="cadastrar_cliente_db.php" method="post">
+?>
+	<h1>Cadastro de Cliente</h1>
+	<form action="cadastrar_cliente_db.php" method="post">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="50"><br><br>
 			

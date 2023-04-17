@@ -14,7 +14,7 @@ include('conexao.php');
     </style>
 </head>
 <body>
-    <div class="conteudo"
+    <div class="conteudo">
     <?php
     include('menu.php');
     ?>

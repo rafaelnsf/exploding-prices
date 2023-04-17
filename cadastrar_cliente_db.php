@@ -16,6 +16,7 @@
 <body>
 	<div class="conteudo">
 	<?php	
+	include('menu.php');
 			$nome     = $_POST['nome'];
 			$endereco = $_POST['endereco'];
 			$telefone = $_POST['telefone'];
