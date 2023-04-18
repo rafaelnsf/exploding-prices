@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Abr-2023 às 22:42
+-- Tempo de geração: 19-Abr-2023 às 00:46
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -145,7 +145,20 @@ CREATE TABLE `item_compra` (
 --
 
 INSERT INTO `item_compra` (`quantidade`, `id_produto`, `id_pedido_compra`, `valor_total`) VALUES
-(1, 2, 1, '0.00');
+(1, 2, 2, '100.00'),
+(1, 12, 2, '100.00'),
+(1, 6, 2, '100.00'),
+(1, 11, 2, '100.00'),
+(1, 13, 3, '100.00'),
+(1, 11, 3, '100.00'),
+(1, 2, 4, '100.00'),
+(1, 5, 4, '100.00'),
+(1, 6, 4, '100.00'),
+(1, 7, 4, '100.00'),
+(1, 8, 4, '100.00'),
+(1, 9, 4, '100.00'),
+(1, 10, 4, '100.00'),
+(1, 13, 4, '100.00');
 
 -- --------------------------------------------------------
 
@@ -167,7 +180,27 @@ CREATE TABLE `item_pedido` (
 INSERT INTO `item_pedido` (`quantidade`, `id_produto`, `id_pedido_venda`, `valor_total`) VALUES
 (2, 2, 0, '0.00'),
 (2, 2, 0, '0.00'),
-(1, 2, 1, '0.00');
+(1, 2, 6, '100.00'),
+(1, 2, 6, '100.00'),
+(1, 2, 6, '100.00'),
+(1, 2, 6, '100.00'),
+(1, 2, 7, '100.00'),
+(1, 2, 7, '100.00'),
+(1, 2, 7, '100.00'),
+(1, 2, 7, '100.00'),
+(1, 2, 7, '100.00'),
+(5, 2, 1, '0.00'),
+(5, 2, 1, '0.00'),
+(5, 5, 1, '0.00'),
+(5, 7, 1, '0.00'),
+(5, 10, 1, '0.00'),
+(5, 13, 1, '0.00'),
+(1, 2, 8, '100.00'),
+(1, 2, 8, '100.00'),
+(1, 6, 8, '100.00'),
+(1, 2, 8, '100.00'),
+(1, 12, 8, '100.00'),
+(1, 11, 9, '100.00');
 
 -- --------------------------------------------------------
 
@@ -188,7 +221,10 @@ CREATE TABLE `pedido_compra` (
 --
 
 INSERT INTO `pedido_compra` (`id`, `status`, `id_fornecedor`, `valor_compra`, `data_pedido_compra`) VALUES
-(1, 'A', 1, '10.00', '2023-04-16 16:54:00');
+(1, 'A', 1, '15.00', '2023-04-16 18:00:00'),
+(2, 'A', 3, '1000.00', '2023-04-18 19:00:00'),
+(3, 'A', 4, '1234.00', '2023-04-18 19:36:00'),
+(4, 'A', 5, '15457.00', '2023-04-18 19:36:00');
 
 -- --------------------------------------------------------
 
@@ -210,8 +246,10 @@ CREATE TABLE `pedido_venda` (
 --
 
 INSERT INTO `pedido_venda` (`id`, `data_pedido_venda`, `status`, `valor_pedido`, `id_cliente`, `id_funcionario`) VALUES
-(1, '2023-04-14 22:00:00', 'I', '15.000', 1, 1),
-(4, '2023-04-16 15:39:00', 'A', '150.000', 1, 1);
+(6, '0000-00-00 00:00:00', 'A', '254.000', 1, 1),
+(7, '2023-04-20 19:37:00', 'A', '5454.000', 2, 2),
+(8, '2023-04-18 19:44:00', 'A', '8787.000', 5, 7),
+(9, '2023-04-18 19:44:00', 'A', '41.000', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -349,13 +387,13 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT de tabela `pedido_compra`
 --
 ALTER TABLE `pedido_compra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `pedido_venda`
 --
 ALTER TABLE `pedido_venda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
