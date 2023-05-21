@@ -8,7 +8,6 @@ include('conexao.php');
     <title>Exploding Prices - Alterar Categoria</title>
     <style type="text/css" rel="stylesheet">
         .conteudo {
-            margin-left: 220px;
             padding: 20px;
         }
     </style>

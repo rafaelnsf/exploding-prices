@@ -8,7 +8,6 @@ include('conexao.php');
     <title>Exploding Prices - Excluir Cliente</title>
     <style type="text/css" rel="stylesheet">
         .conteudo {
-            margin-left: 220px;
             padding: 20px;
         }
     </style>
@@ -16,19 +15,19 @@ include('conexao.php');
 
 <body>
     <div class="conteudo">
-    <?php
-    include('menu.php');
+        <?php
+        include('menu.php');
 
-    $id = $_GET['id'];
+        $id = $_GET['id'];
 
-    $sql = "DELETE FROM cliente WHERE id = '{$id}'";
-    $query = mysqli_query($con, $sql);
-    if (!$query) {
-        echo 'Erro no banco: ' . mysqli_error($con);
-    } else {
-        echo 'Fornecedor excluido com sucesso! Fornecedor Codigo: '. $id;
-    }
-    ?>
+        $sql = "DELETE FROM cliente WHERE id = '{$id}'";
+        $query = mysqli_query($con, $sql);
+        if (!$query) {
+            echo 'Erro no banco: ' . mysqli_error($con);
+        } else {
+            echo 'Fornecedor excluido com sucesso! Fornecedor Codigo: ' . $id;
+        }
+        ?>
     </div>
 </body>
 

@@ -9,7 +9,6 @@
         }
 
         .conteudo {
-            margin-left: 220px;
             padding: 20px;
         }
     </style>
@@ -35,6 +34,9 @@
 
             <button type="submit">Logar</button>
         </form>
+        <a href="cadastrar_login.php">
+            <button>Registrar</button>
+        </a>
     </div>
 </body>
 

@@ -2,34 +2,26 @@
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
     * {
-        box-sizing: border-box;
         font-family: 'Open Sans', sans-serif;
     }
 
     .menu-vertical {
-        width: 200px;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin: 0;
         background-color: rgb(37, 37, 39);
         padding: 20px;
+        height: 25px;
     }
 
     .menu-vertical ul {
         list-style-type: none;
-        padding: 0;
-        margin: 0;
     }
 
     .menu-vertical li {
-        margin-bottom: 10px;
         list-style-type: none;
+        text-align: center;
+        float: left;
     }
 
     .menu-vertical li a {
-        display: block;
         padding: 10px;
         color: #FFF;
         text-decoration: none;

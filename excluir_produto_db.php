@@ -9,7 +9,6 @@ include('conexao.php');
 
     <style type="text/css" rel="stylesheet">
         .conteudo {
-            margin-left: 220px;
             padding: 20px;
         }
     </style>
@@ -17,19 +16,19 @@ include('conexao.php');
 
 <body>
     <div class="conteudo">
-    <?php
-    include('menu.php');
+        <?php
+        include('menu.php');
 
-    $id = $_GET['id'];
+        $id = $_GET['id'];
 
-    $sql = "DELETE FROM produto WHERE id = '{$id}'";
-    $query = mysqli_query($con, $sql);
-    if (!$query) {
-        echo 'Erro no banco: ' . mysqli_error($con);
-    } else {
-        echo 'Produto excluido com sucesso! Produto código: ' . $id;
-    }
-    ?>
+        $sql = "DELETE FROM produto WHERE id = '{$id}'";
+        $query = mysqli_query($con, $sql);
+        if (!$query) {
+            echo 'Erro no banco: ' . mysqli_error($con);
+        } else {
+            echo 'Produto excluido com sucesso! Produto código: ' . $id;
+        }
+        ?>
     </div>
 </body>
 
