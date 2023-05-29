@@ -16,6 +16,7 @@ include('conexao.php')
         include('menu.php');
         ?>
         <h1>Produtos</h1>
+        <a class="btn" href="json_produtos_encode.php" target="_blank">JSON</a>
         <a class="btn" href="cadastrar_produto.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM produto";

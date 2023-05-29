@@ -11,6 +11,8 @@ include('conexao.php');
             padding: 20px;
         }
     </style>
+
+    <link rel="stylesheet" href="style_tables.css">
 </head>
 
 <body>
@@ -19,6 +21,7 @@ include('conexao.php');
         include('menu.php');
         ?>
         <h1>Cadastro de Produtos</h1>
+        <a class="btn" href="json_produtos_decode.php" target="_blank">CADASTRAR JSON</a>
         <form action="cadastrar_produto_db.php" method="post">
 
             <label for="nome">Nome do Produto</label><br>

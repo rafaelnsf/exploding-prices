@@ -8,6 +8,9 @@
 			padding: 20px;
 		}
 	</style>
+
+	<link rel="stylesheet" href="style_tables.css">
+
 </head>
 
 <body>
@@ -16,6 +19,7 @@
 		include('menu.php');
 		?>
 		<h1>Cadastro de Cliente</h1>
+		<a class="btn" href="json_clientes_decode.php" target="_blank">CADASTRAR JSON</a>
 		<form action="cadastrar_cliente_db.php" method="post">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="50"><br><br>

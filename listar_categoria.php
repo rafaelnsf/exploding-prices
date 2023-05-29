@@ -15,6 +15,7 @@ include('conexao.php');
         include('menu.php');
         ?>
         <h1>Categorias</h1>
+        <a class="btn" href="json_categorias_encode.php" target="_blank">JSON</a>
         <a class="btn" href="cadastrar_categoria.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM categoria";

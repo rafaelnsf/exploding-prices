@@ -8,6 +8,7 @@
 			padding: 20px;
 		}
 	</style>
+	<link rel="stylesheet" href="style_tables.css">
 </head>
 
 <body>
@@ -16,6 +17,7 @@
 		include('menu.php');
 		?>
 		<h1>Cadastro de Fornecedor</h1>
+		<a class="btn" href="json_fornecedores_decode.php" target="_blank">CADASTRAR JSON</a>
 		<form action="cadastrar_fornecedor_db.php" method="post">
 			<label for="razao_social">Razão Social</label><br>
 			<input type="text" name="razao_social" id="razao_social" maxlength="50"><br><br>

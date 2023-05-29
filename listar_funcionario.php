@@ -15,6 +15,7 @@ include('conexao.php');
         include('menu.php');
         ?>
         <h1>Funcionários</h1>
+        <a class="btn" href="json_funcionarios_encode.php" target="_blank">JSON</a>
         <a class="btn" href="cadastrar_funcionario.php">Cadastrar</a>
         <?php
         $sql = "SELECT * FROM funcionario";
