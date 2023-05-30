@@ -17,6 +17,7 @@
 	<div class="conteudo" ;>
 		<?php
 		include('menu.php');
+		include('valida_sessao.php');
 		?>
 		<h1>Cadastro de Cliente</h1>
 		<a class="btn" href="json_clientes_decode.php" target="_blank">CADASTRAR JSON</a>

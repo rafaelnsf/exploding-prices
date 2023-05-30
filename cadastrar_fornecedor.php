@@ -15,6 +15,7 @@
 	<div class="conteudo">
 		<?php
 		include('menu.php');
+		include('valida_sessao.php');
 		?>
 		<h1>Cadastro de Fornecedor</h1>
 		<a class="btn" href="json_fornecedores_decode.php" target="_blank">CADASTRAR JSON</a>

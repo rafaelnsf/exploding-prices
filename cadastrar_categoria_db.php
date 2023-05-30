@@ -17,6 +17,7 @@ include('conexao.php');
 	<div class="conteudo">
 		<?php
 		include('menu.php');
+		include('valida_sessao.php');
 
 
 		$nome   	  = $_POST['nome'];

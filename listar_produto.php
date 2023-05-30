@@ -1,5 +1,6 @@
 <?php
-include('conexao.php')
+include('conexao.php');
+include('valida_sessao.php');
 ?>
 
 <!DOCTYPE html>

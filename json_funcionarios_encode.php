@@ -1,5 +1,6 @@
 <?php
 include('conexao.php');
+include('valida_sessao.php');
 
 $sql = "SELECT * FROM funcionario";
 $query = mysqli_query($con, $sql);
