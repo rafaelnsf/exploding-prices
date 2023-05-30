@@ -19,8 +19,8 @@ include('valida_sessao.php');
         <?php
         // Processo de cadastro do usuário
         $login = $_POST['login'];
-        $senha = md5($_POST['senha']);
-        $setor = md5($_POST['setor']); // Aplica o hash MD5 à senha
+        $senha = md5($_POST['senha']); // Aplica o hash MD5 à senha
+        $setor = $_POST['setor'];
 
         $sql = "INSERT INTO usuario VALUES ('{$login}', '{$senha}', '{$setor}', null)";
         $query = mysqli_query($con, $sql);
