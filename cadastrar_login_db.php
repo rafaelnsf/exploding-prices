@@ -18,9 +18,10 @@ include('conexao.php');
         <?php
         // Processo de cadastro do usuário
         $login = $_POST['login'];
-        $senha = md5($_POST['senha']); // Aplica o hash MD5 à senha
+        $senha = md5($_POST['senha']);
+        $setor = md5($_POST['setor']); // Aplica o hash MD5 à senha
 
-        $sql = "INSERT INTO usuario VALUES ('{$login}', '{$senha}', null)";
+        $sql = "INSERT INTO usuario VALUES ('{$login}', '{$senha}', '{$setor}', null)";
         $query = mysqli_query($con, $sql);
         if (!$query) {
             echo 'Erro ao consultar o banco.' . mysqli_error($con);

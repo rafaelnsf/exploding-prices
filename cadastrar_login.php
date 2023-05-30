@@ -24,6 +24,13 @@ include('conexao.php');
             <label for="senha">Senha</label><br>
             <input type="password" name="senha" id="senha" maxlength="100"><br><br>
 
+            <label for="setor">Setor</label><br>
+            <select name="setor" id="setor">
+                <option value="A">Admin</option>
+                <option value="V">Vendas</option>
+            </select><br><br>
+
+
             <button type="submit">Cadastrar</button>
         </form>
     </div>
