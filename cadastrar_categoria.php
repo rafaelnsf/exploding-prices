@@ -16,6 +16,7 @@
 		<?php
 		include('menu.php');
 		include('valida_sessao.php');
+		include('valida_acesso_usuario.php');
 		?>
 		<h1>Cadastro de Categoria</h1>
 		<a class="btn" href="json_categorias_decode.php" target="_blank">CADASTRAR JSON</a>
