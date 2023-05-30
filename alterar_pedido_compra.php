@@ -1,6 +1,7 @@
 <?php
 include('conexao.php');
 include('valida_sessao.php');
+include('valida_acesso_usuario.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

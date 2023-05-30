@@ -17,6 +17,7 @@
 		<?php
 		include('menu.php');
 		include('valida_sessao.php');
+		include('valida_acesso_usuario.php');
 		?>
 		<h1>Cadastro de Funcionário</h1>
 		<a class="btn" href="json_funcionarios_decode.php" target="_blank">CADASTRAR JSON</a>
