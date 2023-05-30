@@ -22,7 +22,8 @@ include('valida_sessao.php');
         $senha = md5($_POST['senha']); // Aplica o hash MD5 à senha
         $setor = $_POST['setor'];
 
-        $sql = "INSERT INTO usuario VALUES ('{$login}', '{$senha}', '{$setor}', null)";
+        $sql = "INSERT INTO usuario VALUES ('{$login}', '{$senha}', null, '{$setor}')";
+
         $query = mysqli_query($con, $sql);
         if (!$query) {
             echo 'Erro ao consultar o banco.' . mysqli_error($con);
