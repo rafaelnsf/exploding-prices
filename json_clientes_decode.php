@@ -2,8 +2,7 @@
 include('conexao.php');
 include('valida_sessao.php');
 
-$json_cliente = '[{"nome":"Joãoo","endereco":"Rua Aaa","telefone":"1121111111","cpf":"11113323111","status":"A"},{"nome":"Maria","endereco":"Rua B","telefone":"222233322222","cpf":"22222233222","status":"A"},{"nome":"José","endereco":"Rua C","telefone":"333344333","cpf":"33333334433","status":"I"}]';
-
+$json_cliente = $_POST['json'];
 $clientes = json_decode($json_cliente, true);
 
 foreach ($clientes as $dados) {
