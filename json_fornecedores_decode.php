@@ -1,5 +1,6 @@
 <?php
 include('conexao.php');
+include('valida_sessao.php');
 
 $json_fornecedores = '[{"razao_social":"IBM","endereco":"Armonk, NY, EUA","telefone":"+1-800-IBM-4YOU","cnpj":"12345678901","status":"A"},
 {"razao_social":"Microsoft","endereco":"Redmond, WA, EUA","telefone":"+1-800-MICROSOFT","cnpj":"98765432101","status":"A"},

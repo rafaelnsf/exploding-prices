@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+     include('valida_sessao.php')
+?>
 
 <head>
     <title>Exploding Prices</title>

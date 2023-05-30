@@ -1,5 +1,6 @@
 <?php
 include('conexao.php');
+include('valida_sessao.php');
 
 $json_funcionarios = '[{"nome":"John Doe","cargo":"Desenvolvedor","salario":5000,"telefone":"(11) 1234-5678","endereco":"Rua Principal, 123","status":"A"},
 {"nome":"Jane Smith","cargo":"Analista de Marketing","salario":4500,"telefone":"(22) 2345-6789","endereco":"Avenida Comercial, 456","status":"A"},

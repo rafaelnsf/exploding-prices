@@ -1,5 +1,6 @@
 <?php
 include('conexao.php');
+include('valida_sessao.php');
 
 $json_categoria = '[{"nome":"Monitores","descricao":"Displays de alta resolução para computadores","status":"A"},
 {"nome":"Periféricos","descricao":"Acessórios para computadores e dispositivos","status":"A"},
