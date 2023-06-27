@@ -1,6 +1,6 @@
 <?php
 include('conexao.php');
-include('valida_sessao.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
