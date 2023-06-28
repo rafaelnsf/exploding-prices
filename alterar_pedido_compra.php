@@ -46,7 +46,7 @@ include('valida_acesso_usuario.php');
                 if ($query) {
                     while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
                 ?>
-                        <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_fornecedor'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['razao_social']; ?></option>
+                        <option value="<?php echo $arr2['id']; ?>"><?php echo $arr2['razao_social']; ?></option>
                 <?php
                     }
                 }
@@ -67,7 +67,6 @@ include('valida_acesso_usuario.php');
                     $sql = "SELECT * FROM item_compra WHERE id_pedido_compra = '{$id}'";
                     $query = mysqli_query($con, $sql);
                     while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
-
                     ?>
                         <tr>
                             <td>
@@ -78,7 +77,7 @@ include('valida_acesso_usuario.php');
                                     if ($query2) {
                                         while ($arr3 = mysqli_fetch_array($query2, MYSQLI_ASSOC)) {
                                     ?>
-                                            <option value="<?php echo $arr3['id']; ?>" <?php if ($arr2['id_produto'] == $arr3['id']) { ?> selected="selected" <?php } ?>><?php echo $arr3['nome']; ?></option>
+                                            <option value="<?php echo $arr3['id']; ?>"><?php echo $arr3['nome']; ?></option>
                                     <?php
                                         }
                                     }
@@ -121,8 +120,8 @@ include('valida_acesso_usuario.php');
 
             <label for="status">Status</label><br>
             <select name="status" id="status">
-                <option value="A" <?php if ($arr['status'] == 'A') { ?>selected="selected" <?php } ?>>Ativo</option>
-                <option value="I" <?php if ($arr['status'] == 'I') { ?>selected="selected" <?php } ?>>Inativo</option>
+                <option value="A">Ativo</option>
+                <option value="I">Inativo</option>
             </select><br><br>
 
             <label for="valor_compra">Valor do Pedido</label><br>
@@ -131,6 +130,17 @@ include('valida_acesso_usuario.php');
             <button type="submit">Alterar</button>
         </form>
     </div>
+
+    <script type="text/javascript" src="./jquery-3.7.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var idFornecedor = '<?php echo $arr['id_fornecedor']; ?>';
+            $('#id_fornecedor option[value="' + idFornecedor + '"]').prop('selected', true);
+
+            var status = '<?php echo $arr['status']; ?>';
+            $('#status option[value="' + status + '"]').prop('selected', true);
+        });
+    </script>
 </body>
 
 </html>

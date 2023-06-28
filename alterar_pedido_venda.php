@@ -45,7 +45,7 @@ include('valida_sessao.php');
                 if ($query) {
                     while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
                 ?>
-                        <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_cliente'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['nome']; ?></option>
+                        <option value="<?php echo $arr2['id']; ?>"><?php echo $arr2['nome']; ?></option>
                 <?php
                     }
                 }
@@ -60,7 +60,7 @@ include('valida_sessao.php');
                 if ($query) {
                     while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
                 ?>
-                        <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_funcionario'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['nome']; ?></option>
+                        <option value="<?php echo $arr2['id']; ?>"><?php echo $arr2['nome']; ?></option>
                 <?php
                     }
                 }
@@ -92,7 +92,7 @@ include('valida_sessao.php');
                                     if ($query2) {
                                         while ($arr3 = mysqli_fetch_array($query2, MYSQLI_ASSOC)) {
                                     ?>
-                                            <option value="<?php echo $arr3['id']; ?>" <?php if ($arr2['id_produto'] == $arr3['id']) { ?> selected="selected" <?php } ?>><?php echo $arr3['nome']; ?></option>
+                                            <option value="<?php echo $arr3['id']; ?>"><?php echo $arr3['nome']; ?></option>
                                     <?php
                                         }
                                     }
@@ -135,14 +135,28 @@ include('valida_sessao.php');
 
             <label for="status">Status</label><br>
             <select name="status" id="status">
-                <option value="A" <?php if ($arr['status'] == 'A') { ?>selected="selected" <?php } ?>>Ativo</option>
-                <option value="I" <?php if ($arr['status'] == 'I') { ?>selected="selected" <?php } ?>>Inativo</option>
+                <option value="A">Ativo</option>
+                <option value="I">Inativo</option>
             </select><br><br>
 
             <label for="valor_pedido">Valor do Pedido</label><br>
             <input type="text" name="valor_pedido" id="valor_pedido" value="<?php echo $arr['valor_pedido']; ?>"><br><br>
 
             <button type="submit">Alterar</button>
+
+            <script type="text/javascript" src="./jquery-3.7.0.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    var idCliente = '<?php echo $arr['id_cliente']; ?>';
+                    $('#id_cliente option[value="' + idCliente + '"]').prop('selected', true);
+
+                    var idFuncionario = '<?php echo $arr['id_funcionario']; ?>';
+                    $('#id_funcionario option[value="' + idFuncionario + '"]').prop('selected', true);
+
+                    var status = '<?php echo $arr['status']; ?>';
+                    $('#status option[value="' + status + '"]').prop('selected', true);
+                });
+            </script>
         </form>
     </div>
 </body>

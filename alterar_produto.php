@@ -53,7 +53,7 @@ include('valida_sessao.php');
                 if ($query) {
                     while ($arr2 = mysqli_fetch_array($query, MYSQLI_ASSOC)) {
                 ?>
-                        <option value="<?php echo $arr2['id']; ?>" <?php if ($arr['id_categoria'] == $arr2['id']) { ?> selected="selected" <?php } ?>><?php echo $arr2['nome']; ?></option>
+                        <option value="<?php echo $arr2['id']; ?>"><?php echo $arr2['nome']; ?></option>
                 <?php
                     }
                 }
@@ -62,11 +62,20 @@ include('valida_sessao.php');
 
             <label for="status">Status</label><br>
             <select name="status" id="status">
-                <option value="A" <?php if ($arr['status'] == 'A') { ?>selected="selected" <?php } ?>>Ativo</option>
-                <option value="I" <?php if ($arr['status'] == 'I') { ?>selected="selected" <?php } ?>>Inativo</option>
+                <option value="A">Ativo</option>
+                <option value="I">Inativo</option>
             </select><br><br>
 
+            <script type="text/javascript" src="./jquery-3.7.0.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    var idCategoria = '<?php echo $arr['id_categoria']; ?>';
+                    $('#id_categoria option[value="' + idCategoria + '"]').prop('selected', true);
 
+                    var status = '<?php echo $arr['status']; ?>';
+                    $('#status option[value="' + status + '"]').prop('selected', true);
+                });
+            </script>
             <button type="submit">Salvar</button>
         </form>
     </div>
